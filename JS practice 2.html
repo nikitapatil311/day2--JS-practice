@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Arrays are special objects. <br>
+        If you want to store list of items we can store it in one name and access the value.<br>
+        
+        * Arrays - Numbered Indeces.<br>
+        * Objects - Named Indeces.<br>
+        
+        Associative Arrays -  arrays with indeces are called as associative arrays<br>
+        it is always recommeded to use <br>
+        const arr = [10, 20, 30], instead of <br>
+        new array(10, 20, 30); - because it produces unexpected results.<br>
+        the typeof operator in an array always returns an Object so,  we have to use Array.isArray(animals)
+    </h1>
+
+    <p id="demo"></p>
+
+    <p id="demo1"></p>
+
+    <script>
+       
+        const animals = [];
+
+        animals[0] = "dog";
+        animals[1] = "cat";
+        animals[2] = "donkey";
+        animals[3] = "rat";
+
+        document.getElementById("demo").innerHTML = animals[0] + " " + animals.length;
+        document.getElementById("demo1").innerHTML = Array.isArray(animals);
+
+        /* If you use named indexes, JavaScript will redefine the array to an object.
+
+After that, some array methods and properties will produce incorrect results.*/
+
+        const person = [];
+
+        person[firstname] = "John";
+        person[lastname] = "kumar";
+        person[age]  = 67;
+
+        document.getElementById("demo3").innerHTML = person[firstname] + " " + person[lastname] + " " + person[age] + " " + person.length;
+
+
+
+
+    </script>
+    
+</body>
+</html>
